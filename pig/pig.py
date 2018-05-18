@@ -381,14 +381,14 @@ def final_strategy(score, opponent_score):
     *** YOUR DESCRIPTION HERE ***
     """
     if (score + opponent_score) % 7 == 0:
-        if 100 - score < 7:
+        if 100 - score < 10:
             return make_roll_until_plan(100 - score)
         else:
-            return make_roll_until_plan(7)
-    elif 100 - score < 20:
+            return make_roll_until_plan(10)
+    elif 100 - score < 21:
         return make_roll_until_plan(100 - score)
     else:
-        return make_roll_until_plan(20)
+        return make_roll_until_plan(21)
 
 def make_final_strategy(r):
     def strategy(score, opponent_score):
